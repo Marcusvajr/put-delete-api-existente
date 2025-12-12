@@ -86,8 +86,17 @@ yarn dev
 ```
 O servidor estará rodando em http://localhost:3000 (ou outra porta configurada no projeto). Agora você pode acessar e testar a API no seu navegador ou usar ferramentas como Postman, Insomnia ou HTTpie.
 
+
+
 ## Modificacoes implementadas
 
 - Implementadas as rotas `PUT /books/:id` e `DELETE /books/:id` com autenticacao via cookie/JWT, validacao de dados e conferencia de propriedade do livro (`user_id`).
-- Ajustados os testes em `test/books.test.ts` para cobrir criacao, edicao e exclusao de livros, incluindo autenticacao e migracoes via `npx knex`.
 - Mantidos os requisitos de resposta: `404` para livro nao encontrado, `200` com dados atualizados no `PUT`, e `204` no `DELETE`.
+
+### 5. Executar os testes
+
+Usando **npm**:
+
+```bash
+npm test
+```
